@@ -1,0 +1,751 @@
+/*
+ * profile.css
+ * This file contains the styles for the profile page, including layout, buttons, 
+ * typography, and responsive design elements.
+ */
+
+/* General Styles */
+body {
+    padding-top: 3%;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p { 
+    font-size: 22px;
+}
+
+/* Card Styles */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: #fff;
+}
+
+/* Navbar Styles */
+.navbar {
+    height: 52px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.navbar-brand img {
+    width: 230px;
+    margin-top: -104px;
+}
+
+/* Carousel Styles */
+.carousel-inner {
+    height: 550px;
+}
+
+.nobel_img img {
+    width: 600px;
+}
+
+/* Details Styles */
+.details {
+    margin: auto;
+    width: 50%;
+}
+
+.user_image img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+/* Footer Styles */
+.footer-section {
+    background: #333;
+    color: #fff;
+    padding: 40px 0 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-column {
+    text-align: center;
+}
+
+.footer-heading {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #007bff;
+}
+
+/* Team Member Styles */
+.team-member {
+    text-align: center;
+}
+
+.member-info {
+    margin-bottom: 15px;
+}
+
+.member-info h4 {
+    margin: 0;
+    color: #fff;
+    font-size: 16px;
+}
+
+.student-id {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+/* Social Links Styles */
+.social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;  /* Centers the icons horizontally */
+    align-items: center;      /* Centers the icons vertically */
+    margin-top: 15px;
+}
+
+.social-link {
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: #007bff;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Footer Bottom Styles */
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright-text {
+    color: #999;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+    
+    .button {
+        font-size: 14px;
+    }
+    
+    .footer-section {
+        padding: 40px 0 20px;
+    }
+
+    .footer-column {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .footer-heading::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-element {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Edit Profile Container Styles */
+.edit-profile-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Section Group Styles */
+.section-group {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+.section-title {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.form-group:hover {
+    transform: translateX(5px);
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #5bc0de;
+    box-shadow: 0 0 5px rgba(91, 192, 222, 0.3);
+}
+
+.btn-info {
+    background-color: #5bc0de;
+    border: none;
+    padding: 12px 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-info:hover {
+    background-color: #31b0d5;
+    transform: translateY(-2px);
+}
+
+.divider {
+    border-top: 2px solid #eee;
+    margin: 20px 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .edit-profile-container {
+        padding: 15px;
+    }
+    
+    .col-sm-5 {
+        width: 100%;
+    }
+    
+    .col-sm-4 {
+        text-align: left;
+        margin-bottom: 5px;
+    }
+}
+
+/* Messages Container Styles */
+.messages-container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.message-table {
+    margin-bottom: 0;
+}
+
+.message-table thead th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    padding: 12px;
+}
+
+.message-content {
+    max-width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.message-time {
+    color: #6c757d;
+    font-size: 0.9em;
+}
+
+.unread-message {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.unread-message td {
+    position: relative;
+}
+
+.unread-message td:first-child::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #007bff;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* Message Card Styles */
+.message-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.message-divider {
+    width: 60px;
+    height: 3px;
+    background: #007bff;
+    margin: 20px auto;
+    border: none;
+}
+
+/* Message Form Styles */
+.message-form {
+    padding: 20px 0;
+}
+
+.message-form .form-group {
+    margin-bottom: 25px;
+}
+
+.message-form label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.message-textarea {
+    min-height: 200px;
+    resize: vertical;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.message-textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 5px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Panel Styles */
+.panel-heading {
+    background: linear-gradient(135deg, #2c3e50, #34495e) !important;
+    color: white !important;
+    padding: 20px;
+    border: none;
+    font-size: 1.2em;
+}
+
+.panel-heading h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.panel-heading i {
+    margin-right: 10px;
+}
+
+.panel {
+    border-radius: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.panel-heading {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.panel-title {
+    color: white;
+    font-weight: 600;
+}
+
+/* Table Styles */
+.table {
+    margin-bottom: 0;
+}
+
+.table > thead > tr > th {
+    border-bottom: 2px solid #dee2e6;
+    color: black;
+}
+
+/* Job Title Styles */
+.job-title {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.job-title:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+/* Label Styles */
+.label {
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+/* Search Form Styles */
+.search-form {
+    margin-bottom: 15px;
+}
+
+/* Filter Buttons Styles */
+.filter-buttons {
+    margin-top: 20px;
+}
+
+.filter-buttons .btn {
+    margin-bottom: 10px;
+}
+
+.input-group-btn .btn {
+    padding: 7px 12px;
+}
+
+.table-responsive {
+    border: none;
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Label Info Styles */
+.label-info {
+    background-color: #17a2b8;
+}
+
+/* Panel Body Styles */
+.panel-body label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Button Block Styles */
+.btn-block {
+    margin-bottom: 8px;
+}
+
+/* Navbar Inverse Styles */
+.navbar-inverse .navbar-nav > li.active > a,
+.navbar-inverse .navbar-nav > li.active > a:hover,
+.navbar-inverse .navbar-nav > li.active > a:focus {
+    background-color: #080808;
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    background-color: #222;
+    transition: background-color 0.3s ease;
+}
+
+/* Body Background Color */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Job Details Container Styles */
+.job-details-container {
+    padding: 2% 5%;
+}
+
+/* Job Card Styles */
+.job-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.job-card:hover {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+/* Panel Heading Styles */
+.panel-heading {
+    background: linear-gradient(135deg, #2c3e50, #34495e) !important;
+    color: white !important;
+    padding: 20px;
+    border: none;
+    font-size: 1.2em;
+}
+
+/* Panel Body Styles */
+.panel-body {
+    padding: 15px;
+}
+
+/* Detail Section Styles */
+.detail-section {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.detail-section:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.detail-value {
+    color: #34495e;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Action Button Styles */
+.action-button {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 15px 0;
+    text-decoration: none;
+}
+
+.action-button.apply {
+    background: #27ae60;
+    color: white;
+    border: none;
+}
+
+.action-button.apply:hover {
+    background: #219a52;
+    transform: translateY(-2px);
+}
+
+/* Applicants Table Styles */
+.applicants-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 15px 0;
+}
+
+.applicants-table th {
+    background: #34495e;
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+.applicants-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.applicants-table tr:hover {
+    background: #f5f6fa;
+}
+
+/* Profile Sidebar Styles */
+.profile-sidebar {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Contact Info Styles */
+.contact-info {
+    margin-top: 25px;
+}
+
+.contact-item {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    color: #34495e;
+}
+
+.contact-item i {
+    margin-right: 10px;
+    color: #2c3e50;
+}
+
+/* Message Button Styles */
+.btn-message {
+    background: #3498db;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: none;
+    margin-top: 15px;
+    transition: all 0.3s;
+}
+
+.btn-message:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Related Jobs Styles */
+.related-jobs {
+    padding: 20px;
+}
+
+.related-job-item {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s;
+}
+
+.related-job-item:hover {
+    background: #f5f6fa;
+}
+
+/* Similar Job Item Styles */
+.similar-job-item {
+    padding: 10px 0;
+}
+
+.similar-job-item h4 {
+    margin: 0 0 5px 0;
+    color: #2c3e50;
+    font-size: 16px;
+}
+
+.similar-job-item p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.similar-job-item .btn-link {
+    padding: 0;
+    margin-top: 5px;
+    color: #3498db;
+}
+
+.similar-job-item .btn-link:hover {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+/* List Group Item Styles */
+.list-group-item {
+    border-left: none;
+    border-right: none;
+    border-radius: 0 !important;
+}
+
+.list-group-item:first-child {
+    border-top: none;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+

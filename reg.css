@@ -1,0 +1,283 @@
+/* style.css */
+
+/* 
+    File Description: 
+    This CSS file contains styles for various components of the web application, 
+    including cards, forms, buttons, and footer sections. 
+    It also includes responsive design adjustments for different screen sizes.
+*/
+
+/* Style for card */
+.card {
+    margin-top: -60px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Style for form elements */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #0069D9;
+    box-shadow: 0 0 0 0.2rem rgba(0,105,217,0.25);
+    transform: translateY(-2px);
+}
+
+/* Style for buttons */
+.btn {
+    border-radius: 20px;
+}
+
+/* Body styling */
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Class-based styles */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* ID-based styles */
+#header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+    .button {
+        font-size: 14px;
+    }
+    .card {
+        margin-top: 0;
+        margin: 10px;
+    }
+    .form-horizontal {
+        padding: 10px;
+    }
+    .col-form-label {
+        text-align: left;
+        margin-bottom: 5px;
+    }
+    .btn-info {
+        width: 100%;
+    }
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply animation to an element */
+.animated-element {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.navbar-brand img {
+    width: 250px;
+}
+
+.navbar {
+    height: 70px;
+}
+
+.card-header {
+    background-color: #0069D9;
+    color: #fff;
+}
+
+/* Form layout improvements */
+.form-horizontal {
+    padding: 20px;
+}
+
+/* Label styling */
+.col-form-label {
+    font-weight: 500;
+    color: #444;
+}
+
+/* Radio button group styling */
+.form-check-inline {
+    margin-right: 15px;
+}
+
+.form-check-input {
+    margin-top: 0.2rem;
+}
+
+/* Submit button enhancement */
+.btn-info {
+    background-color: #0069D9;
+    border: none;
+    padding: 10px 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-info:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Error message styling */
+div[style*="color:red"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: rgba(255,0,0,0.1);
+}
+
+/* Card animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer Styles */
+.footer-section {
+    background-color: #222;
+    color: #fff;
+    padding: 60px 0 20px;
+    margin-top: 50px;
+    width: 100%;
+    position: relative;
+    left: 0;
+    right: 0;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-heading {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: #007bff;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: #007bff;
+    transform: translateX(5px);
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: #007bff;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright-text {
+    color: #999;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Responsive adjustments for footer */
+@media (max-width: 768px) {
+    .footer-section {
+        padding: 40px 0 20px;
+    }
+
+    .footer-column {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .footer-heading::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}

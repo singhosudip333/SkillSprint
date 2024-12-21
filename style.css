@@ -1,0 +1,271 @@
+/* 
+    File: style.css
+    Description: This CSS file contains styles for the website, including layout, typography, buttons, 
+    media queries for responsiveness, and animations. Each section is commented for clarity.
+*/
+
+/* Resetting default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles for the body */
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Typography styles */
+p {
+    font-size: 1.375rem;
+    margin-bottom: 1rem;
+}
+
+/* Button styles */
+.button {
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Header styles */
+#header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.navbar-brand img {
+    width: 230px;
+    
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    .button {
+        font-size: 0.875rem;
+    }
+    .details {
+        width: 90%;
+    }
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply animation to an element */
+.animated-element {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Navbar styles */
+.navbar {
+    height: 70px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Carousel styles */
+.carousel-inner {
+    height: 550px;
+}
+.carousel-inner img {
+    object-fit: cover;
+}
+
+/* Card styles */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-body {
+    background-color: #445069;
+    color: white;
+    padding: 1.25rem;
+}
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+.company-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensures the image fits within the card */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.company-card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.company-logo {
+    transition: opacity 0.3s;
+}
+
+.company-card:hover .company-logo {
+    opacity: 0.8; /* Slightly fade the logo on hover */
+}
+
+/* Feature section styles */
+.feature-section {
+    background-color: #f8f9fa;
+}
+.feature-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Footer styles */
+/* Footer Styles */
+.footer-section {
+    background: #333;
+    color: #fff;
+    padding: 40px 0 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-column {
+    text-align: center;
+}
+
+.footer-heading {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #007bff;
+}
+
+/* Team Member Styles */
+.team-member {
+    text-align: center;
+}
+
+.member-info {
+    margin-bottom: 15px;
+}
+
+.member-info h4 {
+    margin: 0;
+    color: #fff;
+    font-size: 16px;
+}
+
+.student-id {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+/* Social Links Styles */
+.social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;  /* Centers the icons horizontally */
+    align-items: center;      /* Centers the icons vertically */
+    margin-top: 15px;
+}
+
+.social-link {
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: #007bff;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Footer Bottom Styles */
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright-text {
+    color: #999;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-section {
+        padding: 40px 0 20px;
+    }
+    .footer-column {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
+

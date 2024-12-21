@@ -1,0 +1,278 @@
+/* login.css */
+/* 
+ * Styles for the login page, including card styles, form elements, buttons, 
+ * footer, and responsive design for various screen sizes.
+ */
+
+/* Style for card */
+.card {
+    margin-top: 0;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Style for form elements */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #0069D9;
+    box-shadow: 0 0 0 0.2rem rgba(0,105,217,0.25);
+    transform: translateY(-2px);
+}
+
+/* Style for buttons */
+.btn {
+    border-radius: 20px;
+}
+
+/* User type button styles */
+.usertype-btn {
+    margin: 0 5px;
+    min-width: 120px;
+    transition: all 0.3s ease;
+}
+
+.usertype-btn:hover {
+    transform: translateY(-2px);
+}
+
+.usertype-btn.active {
+    transform: translateY(1px);
+}
+
+/* Body styles */
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Button styles */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Header styles */
+#header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .card {
+        margin: 10px;
+    }
+    
+    .form-horizontal {
+        padding: 10px;
+    }
+    
+    .col-form-label {
+        text-align: left;
+        margin-bottom: 5px;
+    }
+    
+    .btn-info {
+        width: 100%;
+    }
+
+    .footer-section {
+        padding: 40px 0;
+    }
+
+    .footer-column {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .footer-heading::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* Login container specific styles */
+.login-container {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0; /* Added padding to prevent navbar overlap */
+}
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 20px;
+        min-height: calc(100vh - 70px); /* Adjust for navbar height */
+    }
+
+    .card {
+        margin: 0;
+        width: 100%;
+    }
+
+    .login-card .card-body {
+        padding: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .login-btn {
+        width: 100%; /* Full width button on mobile */
+        padding: 10px 20px;
+    }
+
+    .user-type-container {
+        flex-direction: column;
+        align-items: start;
+        padding: 10px;
+    }
+
+    .form-check-inline {
+        margin-bottom: 10px;
+        display: block;
+    }
+}
+
+/* For very small devices */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 15px;
+    }
+
+    .card-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .input-group-prepend {
+        margin-bottom: 5px;
+    }
+
+    .input-group > .form-control {
+        border-radius: 5px;
+    }
+}
+
+/* For landscape orientation on mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .login-container {
+        padding: 10px;
+        min-height: auto;
+    }
+
+    .card {
+        margin: 10px 0;
+    }
+}
+
+/* Footer styles */
+.footer-section {
+    background-color: #222;
+    color: #fff;
+    padding: 60px 0 20px;
+}
+
+.footer-heading {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: #007bff;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: #007bff;
+    transform: translateX(5px);
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: #007bff;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright-text {
+    color: #999;
+    font-size: 0.9rem;
+    margin: 0;
+}
