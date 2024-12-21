@@ -35,6 +35,7 @@ $username = isset($_SESSION["Username"]) ? $_SESSION["Username"] : "";
 </head>
 
 <body>
+    <div></div>
     <!-- Navbar Section -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="index.php"><img src="logo/logo.png" alt="Logo" width="50"></a>
